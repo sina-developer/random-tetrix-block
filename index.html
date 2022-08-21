@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+      }
+      body {
+        background: #000;
+        position: relative;
+      }
+
+      .container {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #loading_percent {
+        text-align: center;
+        font-size: 35px;
+      }
+
+      #loading {
+        position: fixed;
+        left: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <canvas id="loading" width="800" height="600"></canvas>
+    </div>
+    <script src="js/init.js"></script>
+    <script src="js/block.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      setup();
+      setInterval(() => {
+        draw();
+      }, 17);
+    </script>
+  </body>
+</html>
